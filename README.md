@@ -38,11 +38,9 @@ Development Tools:
        Django, python, posgraSQL.
 (not sure yet but possible – API with Django REST Framework (DRF) ) 
 
-Wireframes: (submitting drawing by hand having a computer issue.)  Sorry. 
+Wireframes:  
 
  
-
-
 ![](tempwireframe/temp1.jpg)
 ![](tempwireframe/temp2.jpg)
 ![](tempwireframe/temp3.jpg)
