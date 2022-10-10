@@ -23,7 +23,7 @@ class Review(models.Model):
         ('down', 'Up Down'),
     )
         # owner =
-        # project =
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
     body = models.TextField(null=True, blank=True)
     value = models.CharField(max_length = 200, choices=VOTE_TYPE)
     created = models.DateTimeField(auto_now_add=True)
