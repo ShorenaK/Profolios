@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
 {% block content%}
 
-<from>
+<from method="POST">
    <p> Are you sure you want to delete "{{object}}"?</p>
    <a href="{% url 'projects' %}"> 
      Go Back
