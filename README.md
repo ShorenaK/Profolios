@@ -18,8 +18,9 @@ Add or delete project, add skill.
 Post feedback. 
 Write a message to user. 
 Read and Delete message. 
+Pagination.
 
-Stretch Features: Building API, Serializing data.
+Stretch Features: Building API, Serializing data. JSON webToken.
 
 
 Home page will showcase users’ portfolios, also will have a search bar to search user by name or a skill and Nav bar to navigate other pages.
@@ -32,10 +33,10 @@ User can modify their profile by updating deleting or creating images, skills, p
 
 User also will able to receive a message, which will be accessed on their own account, user will able to read and delete the message. (I am not sure about the messaging yet this could be stretch feature.)
 
-ERD is one to many. (Planning to create category if I do so I will have many to many relationships.)
+ERD is oneTomany, manyTomany. 
 
 Development Tools:
-       Django, python, posgraSQL.
+       Django, python, posgraSQL. ?sqlightdb
 (not sure yet but possible – API with Django REST Framework (DRF) ) 
 
 Wireframes:  
