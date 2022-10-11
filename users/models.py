@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 import uuid
 # Create your models here.
+from django.db.models.signals import post_save
+
 
 class Profile(models.Model):
      user = models.OneToOneField(
@@ -37,3 +39,8 @@ class Skill(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+def profileUpdated(sender, instance, created, **kwargs):
+    print('Profile Saved')
+
+post_save.connect(profileUpdated, sender=Profile)
