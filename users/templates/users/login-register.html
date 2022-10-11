@@ -6,7 +6,11 @@
 <form method="POST" action="{% url 'register' %}" class="form auth__form">
             {% csrf_token %}
 
-            {% for field in form %}
+     <input type="text" name="username">
+     <input type="password" name="password" placeholder="Enter Password">
+     <input type="submit" value="Login">
+
+            <!-- {% for field in form %}
             <div class="form__field">
                 <label for="formInput#text">{{field.label}}</label>
                 {{field}}
@@ -15,7 +19,7 @@
                 <small>{{field.help_text}}</small>
                 {% endif %} -->
 
-                {% for error in field.errors %}
+                <!-- {% for error in field.errors %}
                 <p style="color: red;">{{error}}</p>
                 {% endfor %}
 
@@ -25,7 +29,7 @@
 
             <div class="auth__actions">
                 <input class="btn btn--sub btn--lg" type="submit" value="Sign  In" />
-            </div>
+            </div> --> 
         </form>
 
-{%  endblock content%}
+{%  endblock content %}

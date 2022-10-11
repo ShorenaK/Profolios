@@ -3,6 +3,13 @@ from django.shortcuts import render
 from .models import Profile
 # Create your views here.
 
+def loginPage(request):
+    return render(request, 'users/login_register.html')
+
+
+
+
+
 def profiles(request):
     profiles = Profile.objects.all()
     context = {'profiles': profiles}
@@ -18,3 +25,4 @@ def userProfile(request, pk):
     context = {'profile': profile, 'topSkills': topSkills,
                "otherSkills": otherSkills}
     return render(request, 'users/user-profile.html', context)
+
