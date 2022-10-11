@@ -9,6 +9,7 @@ psycopg2-binary = "*"
 psycopg2 = "*"
 load-dotenv = "*"
 pillow = "*"
+whitenoise = "*"
 
 [dev-packages]
 
