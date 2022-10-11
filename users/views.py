@@ -4,11 +4,12 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 from .models import Profile
 from django.contrib import messages
+from .forms import CustomUserCreationForm
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def loginUser(request):
-
+    page = 'login'
     if request.user.is_authenticated:
         return redirect('profiles')
 
@@ -19,7 +20,7 @@ def loginUser(request):
        try:
             user = User.objects.get(username=username)
        except:
-            print('Username does not exist')
+            messages.error(request, 'Username does not exist')
 
        user = authenticate(request, username=username, password=password)
 
@@ -28,15 +29,40 @@ def loginUser(request):
             return redirect('profiles')
 
        else:
-            print('Username OR password is incorrect')
+            messages.error(request, 'Username OR password is incorrect')
     
     return render(request, 'users/login_register.html')
 
 
 def logoutUser(request):
     logout(request)
-    print('User was logged out!')
+    messages.error(request, 'User was logged out!')
     return redirect('login')
+
+
+def registerUser(request):
+    page = 'register'
+    form = CustomUserCreationForm()
+
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.username = user.username.lower()
+            user.save()
+
+            messages.success(request, 'User account was created!')
+
+            login(request, user)
+            return redirect('edit-account')
+
+        else:
+            messages.success(
+                request, 'An error has occurred during registration')
+
+    context = {'page': page, 'form': form}
+    return render(request, 'users/login_register.html', context)
+
 
 
 

@@ -3,6 +3,11 @@
 
 {% block content %}
 
+ {% if page == 'register' %}
+
+   <h1>Register USer </h1>
+   <p> Already have an accouunt<a href="{% url 'login' %}"> Login</a> </p>
+ {% else %}
 <form method="POST" action="{% url 'login' %}" class="form auth__form">
             {% csrf_token %}
 
@@ -30,6 +35,8 @@
             <div class="auth__actions">
                 <input class="btn btn--sub btn--lg" type="submit" value="Sign  In" />
             </div> --> 
-        </form>
 
+        <p> Don't have an accouunt<a href="{% url 'register' %}"> Sign Up</a> </p>
+        </form>
+        {% endif %}
 {%  endblock content %}
