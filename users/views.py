@@ -3,8 +3,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 from .models import Profile
-from django.contrib import messages
 from .forms import CustomUserCreationForm
+from django.contrib import messages
+
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -43,27 +44,26 @@ def logoutUser(request):
 def registerUser(request):
     page = 'register'
     form = CustomUserCreationForm()
-
+#   CustomUserCreationForm()
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
+    #     form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)
-            user.username = user.username.lower()
-            user.save()
+             user = form.save(commit=False)
+             user.username = user.username.lower()
+             user.save()
+             form.save()
 
-            messages.success(request, 'User account was created!')
+             messages.success(request, 'User account was created!')
 
-            login(request, user)
-            return redirect('edit-account')
+             login(request, user)
+             return redirect('profiles')
 
         else:
-            messages.success(
-                request, 'An error has occurred during registration')
+             messages.success(request, 'An error has occurred during registration!')
 
     context = {'page': page, 'form': form}
     return render(request, 'users/login_register.html', context)
-
-
 
 
 def profiles(request):
