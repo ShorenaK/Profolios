@@ -11,11 +11,12 @@ from django.contrib.auth.decorators import login_required
 
 def loginUser(request):
     page = 'login'
+
     if request.user.is_authenticated:
         return redirect('profiles')
 
     if request.method == "POST":
-       username = request.POST['username']
+       username = request.POST['username'].lower()
        password = request.POST['password']
 
        try:
