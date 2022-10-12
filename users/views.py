@@ -53,12 +53,12 @@ def registerUser(request):
              user = form.save(commit=False)
              user.username = user.username.lower()
              user.save()
-             form.save()
+            #  form.save()
 
              messages.success(request, 'User account was created!')
 
              login(request, user)
-             return redirect('profiles')
+             return redirect('edit-account')
 
         else:
              messages.success(request, 'An error has occurred during registration!')
