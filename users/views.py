@@ -50,15 +50,16 @@ def registerUser(request):
         form = CustomUserCreationForm(request.POST)
     #     form = CustomUserCreationForm(request.POST)
         if form.is_valid():
+             form.save()
              user = form.save(commit=False)
              user.username = user.username.lower()
              user.save()
-            #  form.save()
+             form.save()
 
              messages.success(request, 'User account was created!')
 
              login(request, user)
-             return redirect('edit-account')
+             return redirect('profile')
 
         else:
              messages.success(request, 'An error has occurred during registration!')
