@@ -11,7 +11,7 @@ from django.contrib.auth.decorators import login_required
 
 def loginUser(request):
     page = 'login'
-
+#    check this 
     if request.user.is_authenticated:
         return redirect('profiles')
 
@@ -50,16 +50,16 @@ def registerUser(request):
         form = CustomUserCreationForm(request.POST)
     #     form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-             form.save()
+         
              user = form.save(commit=False)
              user.username = user.username.lower()
              user.save()
-             form.save()
+            #  form.save()
 
              messages.success(request, 'User account was created!')
 
              login(request, user)
-             return redirect('profile')
+             return redirect('profiles')
 
         else:
              messages.success(request, 'An error has occurred during registration!')
@@ -69,7 +69,14 @@ def registerUser(request):
 
 
 def profiles(request):
-    profiles = Profile.objects.all()
+    search_query = ''
+    if request.GET.get('search_query'):
+        search_query = request.GET.get('search_query')
+        
+    print('seach:', search_query)
+
+
+    profiles = Profile.objects.filter(name__icontains=search_query)
     context = {'profiles': profiles}
     return render(request, 'users/profiles.html', context)
 
