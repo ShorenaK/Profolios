@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block content %}
+ 
+
+<h1> Edit Accpunt </h1>
+<form method="POST" action="{% url 'edit-account' %}">
+    {% csrf_token %}
+    
+<input type="submit" valu="Submit">
+
+
+</form>
+
+{% endblock content %}
