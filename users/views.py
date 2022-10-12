@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from .models import Profile
 from .forms import CustomUserCreationForm, ProfileForm, SkillForm
 from django.contrib import messages
-
+from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -76,8 +76,8 @@ def profiles(request):
     print('seach:', search_query)
 
 
-    profiles = Profile.objects.filter(name__icontains=search_query)
-    context = {'profiles': profiles}
+    profiles = Profile.objects.filter( Q(name__icontains=search_query) | Q(short_intro=search_query))
+    context = {'profiles': profiles , 'search_query': search_query}
     return render(request, 'users/profiles.html', context)
 
 
