@@ -1,5 +1,5 @@
 {% extends 'main.html' %}
-
+{% load static %}
 {% block content %}
 <main class="projects">
     <section class="hero-section text-center">
@@ -9,6 +9,7 @@
         </div>
 
         <div class="hero-section__search">
+          <img class="bk" src="{% static 'images/bk1.jpg' %}" alt="ProSearch background-color" />
           <form class="form" action="{% url 'projects' %}" method="get">
             <div class="form__field">
               <label for="formInput#search">Search By Projects </label>
@@ -55,12 +56,50 @@
         </div>
       </div>
     </section>
+    <footer class="footer">
+      
+        <p class="text">
+          Profolios Developed By: Shorena K. Anzhilov.| |  Copyright &copy; Profolios 2022
+  
+        </p>
+  
+    </footer>
   </main>
 
   <style>
 /* .text-center{
   background-color: brown;
 } */
+.bk{
+  /* width: 100vw;
+  height: 100vh; */
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 
+}
+.footer{
+            
+            margin-top: 200px;
+            background-color:  rgb(6, 82, 132);
+            font-style:normal;
+            
+        }
+
+.text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: azure;
+ margin-right: 300px; 
+}
+.btn{
+  background-color: rgb(1, 37, 61);
+ }
   </style>
 {% endblock content %}
