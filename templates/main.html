@@ -13,7 +13,7 @@
         <!-- Mumble UI -->
         <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
         <!-- Dev Search UI -->
-        <link rel="stylesheet" href="{%static  'styles/app.css' %}" />
+        <link rel="stylesheet" href="{% static  'styles/app.css' %}" />
       
         <title>PortfolioSearch - Showcase of Portfolios!</title>
       </head>
@@ -43,7 +43,20 @@
     
     {% block content %}
     {% endblock content %}
-</body>
+
 <script src="{% static 'uikit/app.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+<!-- <script src="{% static 'uikit/app.js' %}"></script> -->
 <!-- <script src="{% static 'js/main.js' %}"></script> -->
 </html>
+<!-- 
+<style>
+    body,
+    html {
+      
+   
+        background: url(../images/backgr.jpg) !important;
+    }
+    
+</style> -->

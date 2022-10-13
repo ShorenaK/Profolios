@@ -3,6 +3,10 @@ from django.contrib.auth.models import User
 import uuid
 # Create your models here.
 
+
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
+
 class Profile(models.Model):
      user = models.OneToOneField(
         User, on_delete=models.CASCADE, null=True, blank=True)
@@ -25,6 +29,11 @@ class Profile(models.Model):
 
      def __str__(self):
         return str(self.username)
+
+     class Meta:
+        ordering = ['created']
+
+
 
 class Skill(models.Model):
     owner = models.ForeignKey(

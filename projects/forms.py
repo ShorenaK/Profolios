@@ -18,10 +18,3 @@ class ProjectForm(ModelForm):
 
         for name, field in self.fields.items():
             field.widget.attrs.update({'class': 'input', 'placeholder': 'Add Title'})
-
-
-            # self.fields['title'].widget.attrs.update(
-        #     {'class': 'input'})
-
-        # self.fields['description'].widget.attrs.update(
-        #     {'class': 'input'})

@@ -1,6 +1,6 @@
-
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
+
 from django.contrib.auth.models import User
 from .models import Profile
 
@@ -9,8 +9,9 @@ from .models import Profile
 
 
 
-#@receiver(post_save,sender=Profile)
+# @receiver(post_save,sender=Profile)
 def createProfile(sender, instance, created, **kwargs):
+    print('profile signal triggered')
     if created:
         user = instance
         profile = Profile.objects.create(
@@ -19,8 +20,8 @@ def createProfile(sender, instance, created, **kwargs):
             email=user.email,
             name=user.first_name,
         )
-
-
+        # profile.save()
+# @receiver(post_save,sender=Profile)
 def updateUser(sender, instance, created, **kwargs):
     profile = instance
     user = profile.user
@@ -32,12 +33,12 @@ def updateUser(sender, instance, created, **kwargs):
         user.save()
 
 
-
+# @receiver(post_save,sender=Profile)
 def deleteUser(sender, instance, **kwargs):
     user = instance.user
     user.delete()
 
 
 post_save.connect(createProfile, sender=User)
-post_save.connect(createProfile, sender=Profile)
+post_save.connect(updateUser, sender=Profile)
 post_delete.connect(deleteUser, sender=Profile)

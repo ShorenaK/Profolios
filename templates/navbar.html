@@ -2,9 +2,10 @@
 
 <header class="header">
     <div class="container container--narrow">
-      <a href="{% url 'profiles' %}" class="header__logo">
-        <img src="{% static 'images/logo.svg' %}" alt="ProSearch Logo" />
-      </a>
+      <!-- <a href="{% url 'profiles' %}" class="header__logo">
+     click
+      </a> -->
+      <img class="logo" src="{% static 'images/logo10.png' %}" alt="ProSearch Logo" />
       <nav class="header__nav">
         <input type="checkbox" id="responsive-menu" />
         <label for="responsive-menu" class="toggle-menu">
@@ -14,7 +15,7 @@
         <ul class="header__menu">
           <li class="header__menuItem"><a href="{% url 'profiles' %}">Portfolios</a></li>
           <li class="header__menuItem"><a href="{% url 'projects' %}">Projects</a></li>
-          <li class="header__menuItem"><a href="">Inbox</a></li>
+          <!-- <li class="header__menuItem"><a href="">Inbox</a></li> -->
          
           {% if request.user.is_authenticated %}
           <li class="header__menuItem"><a href="{% url 'account' %}">Account</a></li>
@@ -26,3 +27,19 @@
       </nav>
     </div>
   </header>
+
+   <style>
+
+.logo{
+  /* width: 150px;
+  height: 150px; */
+  width: 150px;
+  height:150px;
+  margin-right: 700px;
+  border-radius: 50px;
+
+}
+.header{
+  background-color: rgb(6, 82, 132);
+}
+  </style>  

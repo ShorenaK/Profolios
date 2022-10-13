@@ -1,32 +1,38 @@
 {% extends 'main.html' %}
-
+{% load static %}
 {% block content %}
 
 <main class="home">
+ 
     <section class="hero-section text-center">
-      <div class="container container--narrow">
-        <div class="hero-section__box">
-          <h2>SAERCH FOR <span>PORTFOLIO</span></h2>
-          <h2>FROM ANYWHERE</h2>
-        </div>
-
-        <div class="hero-section__search">
-          <form class="form" action="{% url 'profiles' %}" method="get">
-            {% csrf_token %}
-            <div class="form__field">
-              <label for="formInput#search">Search Developers </label>
-              <input class="input input--text" id="formInput#search" type="text" name="search_query"
-                value="{{search_query}}"
-                placeholder="Search by developer name" />
-            </div>
-
+    
+        <!-- <img class="logo" src="{% static 'images/PROFOLIOS.png' %}" alt="ProSearch Logo" /> -->
+        <div class="container container--narrow">
+          <div class="hero-section__box">
+            <h2>Live, Learn  <span>Level up</span></h2>
+            <h2>one day at a time.</h2>
+          </div>
+  
+          <div class="hero-section__search">
+            <form class="form" action="{% url 'profiles' %}" method="get">
+              {% csrf_token %}
+              <div class="form__field">
+                <label for="formInput#search">Search Developers </label>
+                <input class="input input--text" id="formInput#search" type="text" name="search_query"
+                  value="{{search_query}}"
+                  placeholder="Portfolio Search by name" />
+              </div>
+          
             <input class="btn btn--sub btn--lg" type="submit" value="Search" />
           </form>
         </div>
       </div>
     </section>
-    <!-- Search Result: DevList -->
+  
     <section class="devlist">
+      <video class="hero"autoPlay loop muted id="video"> 
+        <source src="{% static 'images/video.mp4' %}" type='video/mp4'/>
+      </video>
       <div class="container">
         <div class="grid grid--three">
 
@@ -64,4 +70,46 @@
 
   </main>
 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    .text-center {
+    margin: 0;
+    font-family: 'Outfit' 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(6, 82, 132);
+  }
+    .hero-section { 
+       margin-bottom: 200px;
+      margin-top: 200px;
+      margin-right: 300px;
+      margin-left: 300px;
+      border-radius: 40px;
+    } 
+  /* .container--narrow{ only logi and navgationbar 
+    background-color: blue;
+  } */
+  .hero{
+     /* object-fit: contain; */
+     
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+
+ }
+ .btn{
+  background-color: rgb(1, 37, 61)
+ }
+  </style> 
+
 {% endblock content%}
+
+ 

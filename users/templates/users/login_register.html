@@ -11,7 +11,7 @@
                 <img src="{% static 'images/icon.svg' %}" alt="icon" />
             </a>
             <h3>Register an Account</h3>
-            <p>Create a new developer account</p>
+            <p>Create a new account</p>
         </div>
 
         <form method="POST" action="{% url 'register' %}" class="form auth__form">
@@ -35,7 +35,7 @@
             {% endfor %}
 
             <div class="auth__actions">
-                <input class="btn btn--sub btn--lg" type="submit" value="Sign  In" />
+                <input class="btn btn--sub btn--lg" type="submit" value="Register User" />
             </div>
         </form>
         <div class="auth__alternative">
@@ -58,10 +58,10 @@
                 <img src="{% static 'images/icon.svg' %}" alt="icon" />
             </a>
             <h3>Account Login</h3>
-            <p>Hello Developer, Welcome Back!</p>
+            <p>Hello, Welcome Back!</p>
         </div>
-
-        <form action="{% url 'login' %}" method="POST" class="form auth__form">
+<!-- {% url 'login' %} -->
+        <form action="" method="POST" class="form auth__form">
             {% csrf_token %}
             <!-- Input:Username -->
             <div class="form__field">
@@ -102,7 +102,15 @@
 
 {% endif %}
 
-
+<!-- <style>
+    body,
+    html {
+      
+   
+        background: url(../images/backgr.jpg) !important;
+    }
+    
+</style> -->
 
 
 {% endblock content %}

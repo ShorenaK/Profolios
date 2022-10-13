@@ -297,7 +297,7 @@ img {
 /*=======================
   Pagination
 ========================*/
-.pagination {
+/* .pagination {
   margin-top: 8rem;
   margin-bottom: 10rem;
 }
@@ -317,7 +317,7 @@ img {
 
 .pagination .btn.btn--sub {
   color: var(--color-light);
-}
+} */
 
 /*=======================
   Profile
