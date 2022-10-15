@@ -54,6 +54,7 @@ Post feedback.
 Write a message to user. 
 Read and Delete message. 
 Pagination.
+Send a Welcome emails. 
 
 ## Link to hosted application:
 
