@@ -9,7 +9,7 @@
         </div>
 
         <div class="hero-section__search">
-          <img class="bk" src="{% static 'images/bk1.jpg' %}" alt="ProSearch background-color" />
+          <img class="bk" src="{% static 'images/bk1.jpg' %} " alt="ProSearch background-color" />
           <form class="form" action="{% url 'projects' %}" method="get">
             {% csrf_token %}
             <div class="form__field">
@@ -104,5 +104,9 @@
       margin-left: 300px;
       border-radius: 40px;
   }
+  body{
+   
+  }
   </style>
 {% endblock content %}
+
