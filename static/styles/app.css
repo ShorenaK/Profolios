@@ -634,9 +634,7 @@ img {
   text-align: right;
 }
 
-/*=======================
-  Login/SignUp
-========================*/
+
 
 .auth {
   width: 100%;
@@ -714,9 +712,7 @@ img {
   font-weight: 500;
 }
 
-/*=======================
-  Inbox
-========================*/
+
 
 .inbox {
   height: 90vh;
@@ -780,9 +776,7 @@ img {
   text-align: right;
 }
 
-/*=======================
-  Single Message
-========================*/
+
 
 .messagePage .message {
   list-style: none;
@@ -827,9 +821,7 @@ img {
 }
 
 
-/*=======================
-  Form Page
-========================*/
+
 
 .formPage .formWrapper {
   list-style: none;

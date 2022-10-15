@@ -6,7 +6,6 @@ from django.db import models
 import uuid
 from users.models import Profile
 
-# Create your models here.
 class Project(models.Model):
     owner = models.ForeignKey(Profile, null=True, blank=True, on_delete=models.SET_NULL)
     title = models.CharField(max_length = 200)
@@ -30,7 +29,7 @@ class Review(models.Model):
         ('up', 'Up Vote'),
         ('down', 'Up Down'),
     )
-        # owner =
+       
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     body = models.TextField(null=True, blank=True)
     value = models.CharField(max_length = 200, choices=VOTE_TYPE)
