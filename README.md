@@ -1,7 +1,9 @@
 
 ![](static//images/logo3.png)
-Introduction: "Profolios" -
-  Online directory for purpose of exposure
+
+
+## Introduction: "Profolios" 
+  - Online directory for purpose of exposure
 of user’s portfolio. 
 
 ## Features:
