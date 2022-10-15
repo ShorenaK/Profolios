@@ -7,15 +7,16 @@ from .forms import CustomUserCreationForm, ProfileForm, SkillForm
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
-# Create your views here.
+
 
 def loginUser(request):
     page = 'login'
-#    check this 
+
     if request.user.is_authenticated:
         return redirect('profiles')
 
     if request.method == "POST":
+       print(request.POST)
        username = request.POST['username'].lower()
        password = request.POST['password']
 
@@ -28,6 +29,7 @@ def loginUser(request):
 
        if user is not None:
             login(request, user)
+           
             return redirect('profiles')
 
        else:
@@ -45,16 +47,14 @@ def logoutUser(request):
 def registerUser(request):
     page = 'register'
     form = CustomUserCreationForm()
-#   CustomUserCreationForm()
+  
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
-    #     form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-         
              user = form.save(commit=False)
              user.username = user.username.lower()
              user.save()
-            #  form.save()
+           
 
              messages.success(request, 'User account was created!')
 
@@ -151,7 +151,6 @@ def updateSkill(request, pk):
 
     context = {'form': form}
     return render(request, 'users/skill_form.html', context)
-
 
 
 @login_required(login_url='login')

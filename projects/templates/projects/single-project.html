@@ -40,6 +40,7 @@
               </h5>
   
               <form class="form" action="#" method="POST">
+                {% csrf_token %}
                 <!-- Textarea -->
                 <div class="form__field">
                   <label for="formInput#textarea">Comments: </label>

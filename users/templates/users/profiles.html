@@ -5,8 +5,6 @@
 <main class="home">
  
     <section class="hero-section text-center">
-    
-        <!-- <img class="logo" src="{% static 'images/PROFOLIOS.png' %}" alt="ProSearch Logo" /> -->
         <div class="container container--narrow">
           <div class="hero-section__box">
             <h2>Live, Learn  <span>Level up</span></h2>
@@ -82,7 +80,7 @@
     background-color: rgb(6, 82, 132);
   }
     .hero-section { 
-       margin-bottom: 200px;
+      margin-bottom: 200px;
       margin-top: 200px;
       margin-right: 300px;
       margin-left: 300px;
@@ -108,9 +106,38 @@
  .btn{
   background-color: rgb(1, 37, 61);
  }
+
+
+ @media screen and (max-width:1024px) {
+  .hero-section  {
+    position: fixed;
+    display: block;
+    
+  }
+  @media screen and (max-width:900px) {
+
+    .hero-section  {
+      position: fixed;
+      display: block;
+    }
+  }
  
+    
+ @media screen and (max-width:750px) {
+  .hero-section {
+    position: fixed;
+    display: block;
+    
+  }
+
+  @media screen and (max-width: 650px) {
+  .hero-section  {
+     
+    display: block;
+    position: fixed;
+    
+  }
+
   </style> 
 
-{% endblock content%}
-
- 
+{% endblock %}
