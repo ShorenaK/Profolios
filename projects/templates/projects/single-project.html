@@ -53,21 +53,21 @@
                 <div class="comment">
                   <a href="profile.html">
                     <img class="avatar avatar--md"
-                      src="{% static 'images/pr.png' %} " alt="user" />
+                      src="{% url 'project' project.id %} " alt="user" />
                   </a>
                   <div class="comment__details">
-                    <a href="profile.html" class="comment__author">User</a>
+                    <a href="{% url 'project' project.id %}" class="comment__author">User</a>
                     <p class="comment__info">
                       Great wokrk!
                     </p>
                   </div>
                 </div>
                 <div class="comment">
-                  <a href="profile.html">
+                  <a href="{% url 'project' project.id %}">
                     <img class="avatar avatar--md" src="" alt="user" />
                   </a>
                   <div class="comment__details">
-                    <a href="profile.html" class="comment__author">User </a>
+                    <a href="{% url 'project' project.id %}" class="comment__author">User </a>
                     <p class="comment__info">
                       Love it!
                     </p>
