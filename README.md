@@ -8,7 +8,7 @@ of user’s portfolio.
 
 ## Features:
 
-Ability to create and share portfolios, message other members to give feedback on their portfolio or rate their work. As well as search a member or particle portfolio by name. 
+Ability to create and share portfolios, as well as search a member or particle portfolio by name. 
 Search bar functionality. 
 Authentication, Login and Logout pages.
 Create account. 
@@ -55,6 +55,7 @@ Write a message to user.
 Read and Delete message. 
 Pagination.
 Send a Welcome emails. 
+
 
 ## Link to hosted application:
 
