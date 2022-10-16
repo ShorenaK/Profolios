@@ -39,7 +39,7 @@
                 {{project.vote_ratio}}% Postitive Feedback ({{project.vote_total}} Vote{{project.vote_total|pluralize:"s"}})
               </h5>
   
-              <form class="form" action="#" method="POST">
+              <form class="form" action="{% url 'project' project.id %}" method="POST">
                 {% csrf_token %}
                 <!-- Textarea -->
                 <div class="form__field">
