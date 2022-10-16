@@ -16,6 +16,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()  
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -126,3 +127,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+import django_heroku
+django_heroku.settings(locals())

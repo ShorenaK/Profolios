@@ -10,6 +10,9 @@ psycopg2 = "*"
 load-dotenv = "*"
 pillow = "*"
 whitenoise = "*"
+django-heroku = "*"
+django-on-heroku = "*"
+gunicorn = "*"
 
 [dev-packages]
 
