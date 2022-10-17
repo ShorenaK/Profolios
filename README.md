@@ -33,7 +33,7 @@ Showcases users’ portfolios, with a search bar to search user by name or a ski
 ![](READMEIMG/Register_page.png)
 
 Development Tools:
- Django, python, posgraSQL.
+ Django, python, postgreSQL.
 
 ## Resources:
 
