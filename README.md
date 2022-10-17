@@ -37,7 +37,7 @@ Development Tools:
 
 ## Resources:
 
-- Mumble ui kit.
+
 - Google
 - Stack Overflow
 - django documentation 
