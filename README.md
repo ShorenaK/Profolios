@@ -12,7 +12,7 @@ Ability to create and share portfolios, as well as search a member or particle p
 Search bar functionality. 
 Authentication, Login and Logout pages.
 Create account. 
-User ‘s Registration, receiving welcome email after registration. 
+User ‘s Registration. 
 Restrict users that are not logged in. 
 Update profile (image, bio).
 Add or delete project, add skill. 
