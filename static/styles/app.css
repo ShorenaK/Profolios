@@ -25,9 +25,6 @@ img {
   margin: 0 auto;
 }
 
-/*=======================
-  Header Section
-========================*/
 .header {
   position: sticky;
   z-index: 111;
@@ -165,9 +162,7 @@ img {
   }
 }
 
-/*=======================
-  Hero Section
-========================*/
+
 
 .hero-section {
   height: 40vh;
@@ -257,9 +252,6 @@ img {
   }
 }
 
-/*=======================
-  Developers
-========================*/
 
 .devlist {
   margin-top: 8rem;
@@ -294,34 +286,6 @@ img {
   text-align: justify;
 }
 
-/*=======================
-  Pagination
-========================*/
-/* .pagination {
-  margin-top: 8rem;
-  margin-bottom: 10rem;
-}
-
-.pagination > ul {
-  flex-wrap: wrap;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.pagination .btn {
-  color: var(--color-sub);
-}
-
-.pagination .btn.btn--sub {
-  color: var(--color-light);
-} */
-
-/*=======================
-  Profile
-========================*/
 
 .profile .card > .dev {
   padding: 4rem;
@@ -405,10 +369,6 @@ img {
   }
 }
 
-/*=======================
-  Single Projects
-========================*/
-
 .singleProject .column--1of3 {
   order: 2;
 }
@@ -482,9 +442,6 @@ img {
   margin-bottom: 1rem;
 }
 
-/*=======================
-  Projects Page
-========================*/
 .projects > .hero-section {
   background: var(--color-sub-lighter);
   height: 30vh;
@@ -507,8 +464,6 @@ img {
   margin-top: 8rem;
 }
 
-/*========== Projects ==========*/
-
 .project__thumbnail {
   height: 25rem;
   object-fit: cover;
@@ -527,7 +482,6 @@ img {
   text-align: justify;
 }
 
-/*========== Comments ==========*/
 
 .comments {
   margin-top: 4rem;
@@ -561,9 +515,6 @@ img {
   font-size: 1.45rem;
 }
 
-/*=======================
-  Account Settings
-========================*/
 
 .settingsPage .dev > .settings__btn {
   display: inline-block;
@@ -633,8 +584,6 @@ img {
 .settings__tableActions {
   text-align: right;
 }
-
-
 
 .auth {
   width: 100%;
@@ -712,99 +661,6 @@ img {
   font-weight: 500;
 }
 
-
-
-.inbox {
-  height: 90vh;
-}
-
-.inbox__title,
-.inbox__title span {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: var(--color-sub);
-  text-transform: uppercase;
-  text-align: left;
-  margin-bottom: 3rem;
-}
-
-.inbox__title span {
-  color: var(--color-main);
-}
-
-.messages {
-  list-style: none;
-  background: var(--color-white);
-  padding: 0.5rem 3rem;
-  border: 2px solid var(--color-light);
-  border-radius: 0.7rem;
-}
-
-.message {
-  padding: 2.5rem 0;
-}
-
-.message > a span {
-  font-size: 1.45rem;
-  font-weight: 500;
-}
-
-.message.message--unread a span {
-  font-weight: 700;
-  color: var(--color-sub);
-}
-
-.message:not(:last-child) {
-  border-bottom: 2px solid var(--color-white-light);
-}
-
-.message > a {
-  display: flex;
-  gap: 1rem;
-}
-
-.message__author,
-.message__date {
-  flex-basis: 25%;
-}
-
-.message__subject {
-  flex-basis: 50%;
-}
-
-.message__date {
-  text-align: right;
-}
-
-
-
-.messagePage .message {
-  list-style: none;
-  background: var(--color-white);
-  padding: 3.5rem 5rem;
-  border: 2px solid var(--color-light);
-  border-radius: 0.7rem;
-}
-
-.messagePage .message__subject {
-  font-size: 2.8rem;
-  color: var(--color-sub);
-  margin-bottom: 1rem;
-  margin-top: 2rem;
-}
-
-.messagePage .message__author {
-  font-size: 1.8rem;
-  font-weight: 500;
-}
-
-.messagePage .message__date {
-  font-size: 1.4rem;
-  font-weight: 400;
-  text-align: left;
-  margin-bottom: 3rem;
-}
-
 .backButton {
   background: var(--color-main-light);
   color: var(--color-main);
@@ -819,8 +675,6 @@ img {
 .backButton i {
   font-size: 1.8rem;
 }
-
-
 
 
 .formPage .formWrapper {
